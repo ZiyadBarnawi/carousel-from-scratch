@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+body {
+  font-family: "Raleway", sans-serif;
+}
+img {
+  height: 200px;
+  box-shadow: 5px 5px 15px black;
+  transform: scale(1.9);
+  background-color: #ffa94d;
+  margin: 86px;
+  border-radius: 15px;
+}
+.img-2,
+.img-3,
+.img-4 {
+  transform: scale(2.5);
+}
+.carousel {
+  display: flex;
+  align-items: center;
+  margin: 100px auto;
+  padding: 32px;
+  background-color: #ffa94d;
+  width: 1400px;
+  gap: 50px;
+  line-height: 1.5;
+  border-radius: 15px;
+  position: relative;
+}
+.hide-card {
+  display: none;
+}
+
+.active-card {
+    /* Turns out that this one is useless */
+}
+.customer-opinion {
+  font-size: 28px;
+  color: #ffe8cc;
+  height: 100px;
+  margin-left: 50px;
+  padding: 48px;
+
+}
+.name {
+  padding-top: 100px;
+}
+.name,
+.job {
+  align-self: center;
+  color: #fff4e6;
+  font-size: 18px;
+}
+.vertical-text {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0px;
+  justify-content: center;
+  justify-content: flex-start;
+}
+
+button {
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.right-btn {
+  right: -10px;
+  box-shadow: 5px 5px 10px black;
+}
+.left-btn {
+  left: -25px;
+  box-shadow: 5px 5px 10px black;
+}
+.left-arrow {
+  fill: #e8590c;
+}
+.right-arrow {
+  fill: #e8590c;
+}
+.dots {
+  position: relative;
+  top: 250px;
+  right: 50%;
+  display: flex;
+}
+
+.dot-1 {
+  position: absolute;
+  border-radius: 100px;
+  background-color: #e8590c;
+  background-color: white;
+  border: 5px solid #e8590c;
+  width: 20px;
+  height: 20px;
+  left: -50px;
+}
+.dot-2 {
+  border-radius: 100px;
+  background-color: #e8590c;
+  background-color: white;
+  border: 5px solid #e8590c;
+  width: 20px;
+  height: 20px;
+  left: -25px;
+}
+.dot-3 {
+  border-radius: 100px;
+  background-color: #e8590c;
+  background-color: white;
+  border: 5px solid #e8590c;
+  width: 20px;
+  height: 20px;
+  left: 0;
+}
+.dot-4 {
+  border-radius: 100px;
+  background-color: #e8590c;
+  background-color: white;
+  border: 5px solid #e8590c;
+  width: 20px;
+  height: 20px;
+  left: 25px;
+}
+.active-dot {
+  background-color: #e8590c;
+}
+
+.next-animation {
+  animation-name: nextAnimation;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes nextAnimation {
+
+  from{
+    right: -100px;
+    opacity: 0;
+  }
+
+  to{
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.previous-animation {
+  animation-name: previousAnimation;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes previousAnimation {
+
+    from{
+        right: 0;
+        opacity: 1;
+
+    }
+
+    to{
+        right: 100px;
+        opacity: 0;
+    }
+    
+}
+
