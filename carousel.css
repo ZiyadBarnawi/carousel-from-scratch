@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 body {
   font-family: "Raleway", sans-serif;
@@ -24,9 +24,9 @@ img {
   display: flex;
   align-items: center;
   margin: 100px auto;
-  padding: 32px;
+  /* padding: 32px; */
   background-color: #ffa94d;
-  width: 1400px;
+  width: 80%;
   gap: 50px;
   line-height: 1.5;
   border-radius: 15px;
@@ -37,15 +37,14 @@ img {
 }
 
 .active-card {
-    /* Turns out that this one is useless */
+  /* Turns out that this one is useless */
 }
 .customer-opinion {
-  font-size: 28px;
+  font-size: 22px;
   color: #ffe8cc;
   height: 100px;
   margin-left: 50px;
-  padding: 48px;
-
+  /* padding: 10px; */
 }
 .name {
   padding-top: 100px;
@@ -94,47 +93,34 @@ button {
   fill: #e8590c;
 }
 .dots {
+  pointer-events: none;
+  cursor: default;
   position: relative;
   top: 250px;
   right: 50%;
   display: flex;
 }
 
-.dot-1 {
-  position: absolute;
+.dot {
   border-radius: 100px;
   background-color: #e8590c;
   background-color: white;
   border: 5px solid #e8590c;
   width: 20px;
   height: 20px;
+}
+.dot-1 {
+  position: absolute;
+
   left: -50px;
 }
 .dot-2 {
-  border-radius: 100px;
-  background-color: #e8590c;
-  background-color: white;
-  border: 5px solid #e8590c;
-  width: 20px;
-  height: 20px;
   left: -25px;
 }
 .dot-3 {
-  border-radius: 100px;
-  background-color: #e8590c;
-  background-color: white;
-  border: 5px solid #e8590c;
-  width: 20px;
-  height: 20px;
   left: 0;
 }
 .dot-4 {
-  border-radius: 100px;
-  background-color: #e8590c;
-  background-color: white;
-  border: 5px solid #e8590c;
-  width: 20px;
-  height: 20px;
   left: 25px;
 }
 .active-dot {
@@ -143,23 +129,22 @@ button {
 
 .next-animation {
   animation-name: nextAnimation;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-direction: normal;
   animation-fill-mode: forwards;
 }
 
-@keyframes nextAnimation {
-
-  from{
+/* @keyframes nextAnimation {
+  from {
     right: -100px;
     opacity: 0;
   }
 
-  to{
+  to {
     right: 0;
     opacity: 1;
   }
-}
+} */
 
 .previous-animation {
   animation-name: previousAnimation;
@@ -169,17 +154,13 @@ button {
 }
 
 @keyframes previousAnimation {
+  from {
+    right: 0;
+    opacity: 1;
+  }
 
-    from{
-        right: 0;
-        opacity: 1;
-
-    }
-
-    to{
-        right: 100px;
-        opacity: 0;
-    }
-    
+  to {
+    right: 100px;
+    opacity: 0;
+  }
 }
-

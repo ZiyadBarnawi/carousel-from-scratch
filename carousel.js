@@ -13,33 +13,27 @@ let card3 = document.querySelector(".card-3");
 let card4 = document.querySelector(".card-4");
 
 const goRight = function func1() {
-  // console.log(rightBtns)
   let activeCard = document.querySelector(".active-card");
-  // console.log(activeCard)
   let nextCard = null;
   let cardInUse = null;
   if (activeCard.classList.contains("card-1")) {
     nextCard = card2;
-    //  activeCard.classList.toggle("previous-animation")
-    // nextCard.classList.toggle("next-animation")
+
     console.log(`Inside the first if`);
     cardInUse = card1;
   } else if (activeCard.classList.contains("card-2")) {
     nextCard = card3;
-    // activeCard.classList.toggle("previous-animation")
-    // nextCard.classList.toggle("next-animation")
+
     console.log(`Inside the second if`);
     cardInUse = card2;
   } else if (activeCard.classList.contains("card-3")) {
     nextCard = card4;
-    // activeCard.classList.toggle("previous-animation")
-    // nextCard.classList.toggle("next-animation")
+
     console.log(`Inside the third if`);
     cardInUse = card3;
   } else if (activeCard.classList.contains("card-4")) {
     nextCard = card1;
-    // activeCard.classList.toggle("previous-animation")
-    // nextCard.classList.toggle("next-animation")
+
     console.log(`Inside the fourth if`);
     cardInUse = card4;
   }
@@ -52,37 +46,30 @@ const goRight = function func1() {
   nextCard.classList.toggle("active-card");
   cardInUse.classList.remove("next-animation");
   cardInUse.classList.remove("previous-animation");
-
-  //     nextCard.classList.toggle("next-animation")
-  //     activeCard.classList.toggle("previous-animation")
-  // }
 };
-
-
 
 const goleft = function func1() {
   let activeCard = document.querySelector(".active-card");
   let previousCard = null;
-  let cardInUse=null;
+  let cardInUse = null;
 
   if (activeCard.classList.contains("card-1")) {
     previousCard = card4;
     activeCard.classList.toggle("active-card");
-    cardInUse=card1
+    cardInUse = card1;
   } else if (activeCard.classList.contains("card-2")) {
     previousCard = card1;
     activeCard.classList.toggle("active-card");
-    cardInUse=card2
+    cardInUse = card2;
   } else if (activeCard.classList.contains("card-3")) {
     previousCard = card2;
     activeCard.classList.toggle("active-card");
-    cardInUse=card3
+    cardInUse = card3;
   } else if (activeCard.classList.contains("card-4")) {
     previousCard = card3;
     activeCard.classList.toggle("active-card");
-    cardInUse=card4
+    cardInUse = card4;
   }
-
 
   activeCard.classList.remove("next-animation");
   activeCard.classList.remove("active-card");
@@ -92,7 +79,7 @@ const goleft = function func1() {
   previousCard.classList.toggle("active-card");
   cardInUse.classList.remove("next-animation");
   cardInUse.classList.remove("previous-animation");
-  previousCard.classList.remove("previous-animation")
+  previousCard.classList.remove("previous-animation");
 };
 
 for (let btn of rightBtns) {
