@@ -24,7 +24,6 @@ img {
   display: flex;
   align-items: center;
   margin: 100px auto;
-  /* padding: 32px; */
   background-color: #ffa94d;
   width: 80%;
   gap: 50px;
@@ -36,15 +35,11 @@ img {
   display: none;
 }
 
-.active-card {
-  /* Turns out that this one is useless */
-}
 .customer-opinion {
   font-size: 22px;
   color: #ffe8cc;
   height: 100px;
   margin-left: 50px;
-  /* padding: 10px; */
 }
 .name {
   padding-top: 100px;
@@ -111,7 +106,6 @@ button {
 }
 .dot-1 {
   position: absolute;
-
   left: -50px;
 }
 .dot-2 {
@@ -125,42 +119,4 @@ button {
 }
 .active-dot {
   background-color: #e8590c;
-}
-
-.next-animation {
-  animation-name: nextAnimation;
-  animation-duration: 1s;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-}
-
-/* @keyframes nextAnimation {
-  from {
-    right: -100px;
-    opacity: 0;
-  }
-
-  to {
-    right: 0;
-    opacity: 1;
-  }
-} */
-
-.previous-animation {
-  animation-name: previousAnimation;
-  animation-duration: 1s;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-}
-
-@keyframes previousAnimation {
-  from {
-    right: 0;
-    opacity: 1;
-  }
-
-  to {
-    right: 100px;
-    opacity: 0;
-  }
 }

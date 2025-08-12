@@ -12,43 +12,35 @@ let card2 = document.querySelector(".card-2");
 let card3 = document.querySelector(".card-3");
 let card4 = document.querySelector(".card-4");
 
-const goRight = function func1() {
+const goRight = function () {
   let activeCard = document.querySelector(".active-card");
   let nextCard = null;
   let cardInUse = null;
   if (activeCard.classList.contains("card-1")) {
     nextCard = card2;
 
-    console.log(`Inside the first if`);
     cardInUse = card1;
   } else if (activeCard.classList.contains("card-2")) {
     nextCard = card3;
 
-    console.log(`Inside the second if`);
     cardInUse = card2;
   } else if (activeCard.classList.contains("card-3")) {
     nextCard = card4;
 
-    console.log(`Inside the third if`);
     cardInUse = card3;
   } else if (activeCard.classList.contains("card-4")) {
     nextCard = card1;
 
-    console.log(`Inside the fourth if`);
     cardInUse = card4;
   }
 
-  activeCard.classList.toggle("previous-animation");
   activeCard.classList.toggle("active-card");
   activeCard.classList.toggle("hide-card");
-  nextCard.classList.toggle("next-animation");
   nextCard.classList.toggle("hide-card");
   nextCard.classList.toggle("active-card");
-  cardInUse.classList.remove("next-animation");
-  cardInUse.classList.remove("previous-animation");
 };
 
-const goleft = function func1() {
+const goleft = function () {
   let activeCard = document.querySelector(".active-card");
   let previousCard = null;
   let cardInUse = null;
@@ -71,15 +63,10 @@ const goleft = function func1() {
     cardInUse = card4;
   }
 
-  activeCard.classList.remove("next-animation");
   activeCard.classList.remove("active-card");
   activeCard.classList.toggle("hide-card");
-  previousCard.classList.toggle("previous-animation");
   previousCard.classList.toggle("hide-card");
   previousCard.classList.toggle("active-card");
-  cardInUse.classList.remove("next-animation");
-  cardInUse.classList.remove("previous-animation");
-  previousCard.classList.remove("previous-animation");
 };
 
 for (let btn of rightBtns) {
